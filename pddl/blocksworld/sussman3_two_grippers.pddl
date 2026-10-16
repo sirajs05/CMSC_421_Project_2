@@ -1,4 +1,3 @@
-; TODO-STUDENT: UNFINISHED
 ; Re-create the three-block Sussman instance using blocks-two-grippers.
 ; Required grippers: left and right. Both must start free.
 ; Delete the TODO-STUDENT line only when the file is complete.
@@ -10,11 +9,18 @@
     left right - gripper)
 
   (:init
-    ; TODO: same block configuration as sussman3.pddl
-    ; TODO: both grippers start free
+    
+    (on c a)
+    (ontable a) (ontable b)
+    (clear b) (clear c)
+    (free left) (free right)
+
   )
 
   (:goal (and
-    ; TODO: same goals as sussman3.pddl
+    
+    (on a b)
+    (on b c)
+
   ))
 )

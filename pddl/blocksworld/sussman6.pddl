@@ -1,4 +1,3 @@
-; TODO-STUDENT: UNFINISHED
 ; Use exactly blocks a b c d e f and the required six-block tower goal.
 ; Exact required facts are listed in README.md and the handout.
 ; Delete the TODO-STUDENT line only when the file is complete.
@@ -8,10 +7,21 @@
   (:objects a b c d e f - block)
 
   (:init
-    ; TODO: encode the required initial state
+  
+    (on c a)
+    (ontable a) (ontable b) (ontable d) (ontable e) (ontable f)
+    (clear b) (clear c) (clear d) (clear e) (clear f)
+    (handempty)
+
   )
 
   (:goal (and
-    ; TODO: encode the five on-relations for the required tower
+
+    (on a b)
+    (on b c)
+    (on c d)
+    (on d e)
+    (on e f)  
+  
   ))
 )

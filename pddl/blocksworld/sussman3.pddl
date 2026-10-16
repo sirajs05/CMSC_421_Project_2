@@ -1,4 +1,3 @@
-; TODO-STUDENT: UNFINISHED
 ; Exact required initial facts and goals are listed in README.md and the handout.
 ; Delete the TODO-STUDENT line only when the file is complete.
 
@@ -7,10 +6,18 @@
   (:objects a b c - block)
 
   (:init
-    ; TODO: encode the required Sussman initial state
+    
+    (on c a)
+    (ontable a) (ontable b)
+    (clear b) (clear c)
+    (handempty)
+
   )
 
   (:goal (and
-    ; TODO: (on a b) and (on b c)
+    
+    (on a b)
+    (on b c)
+    
   ))
 )

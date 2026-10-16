@@ -1,4 +1,3 @@
-; TODO-STUDENT: UNFINISHED
 ; Exact service links:
 ; even: f0<->f2<->f4<->f6
 ; odd:  f0<->f1<->f3<->f5
@@ -14,11 +13,20 @@
     f0 f1 f2 f3 f4 f5 f6 - floor)
 
   (:init
-    ; TODO: elevator positions and passenger positions
-    ; TODO: add exactly the 12 directed link facts specified above
+    
+    (link even f0 f2) (link even f2 f4) (link even f4 f6)
+    (link even f2 f0) (link even f4 f2) (link even f6 f4)
+    (link odd f0 f1) (link odd f1 f3) (link odd f3 f5)
+    (link odd f1 f0) (link odd f3 f1) (link odd f5 f3)
+    (lift-at even f2) (lift-at odd f5)
+    (passenger-at p1 f2)
+    (passenger-at p2 f5)
+  
   )
 
   (:goal (and
-    ; TODO: p1 at f3 and p2 at f4
+
+    (passenger-at p1 f3) (passenger-at p2 f4)
+
   ))
 )
